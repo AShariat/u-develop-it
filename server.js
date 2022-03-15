@@ -1,11 +1,12 @@
+// Dependencies.
 const express = require('express');
 const db = require('./db/connection');
 // We don't have to specify index.js in the path (e.g., ./routes/apiRoutes/index.js). If the directory has an index.js file in it, Node.js will automatically look for it when requiring the directory.
 const apiRoutes = require('./routes/apiRoutes');
 
-const PORT = process.env.PORT || 3001;
-
+// Sets up the Express App.
 const app = express();
+const PORT = process.env.PORT || 3001;
 
 // Express middleware
 app.use(express.urlencoded({ extended: false }));
